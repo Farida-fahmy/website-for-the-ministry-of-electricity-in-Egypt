@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>دفع فواتير الكهرباء</title>
+
+    <!-- Link to External Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Link to Font Awesome for Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+</head>
+<style>
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #e3e3e3; 
+}
+
+/* Header */
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color:#233142;
+  padding: 10px 20px;
+  border-bottom: 1px solid #233142;
+  height: 40px; 
+  padding: 20px 0;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.logo img {
+  height: 50px;
+  padding: 20px;
+}
+
+.header-title h1 {
+  font-size: 25px;
+  flex: 1;
+  color: white;
+  float: left;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+/*login*/
+.login-button {
+  background-color: #f95959;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  text-decoration: none;
+  cursor: pointer;
+  
+}
+
+.login-button:hover {
+  background-color: #D5E7B5;
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  position: fixed;
+  right: 15px;
+  border: 2px solid #e3e3e3;
+  z-index: 15;
+  top:5px;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color:#e3e3e3;
+  top:5px;
+}
+
+/* Full-width input fields */
+.form-container input[type=text],
+.form-container input[type=password] {
+  width: 95%;
+  padding: 10px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+.form-container input[type=text]:focus,
+.form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #455d7a;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 10px;
+  opacity: 0.8;
+}
+
+.form-container .cancel {
+  background-color: red;
+}
+
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+
+.language-dropdown {
+  position: relative;
+}
+
+.language-dropdown .dropbtn {
+  font-size: 14px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color:white;
+}
+
+.language-dropdown .dropdown-content {
+  display: none;
+  position: absolute;
+  top: 30px;
+  right: 0;
+  background: #e3e3e3;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+}
+
+.language-dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.language-dropdown .dropdown-content a {
+  padding: 10px;
+  display: block;
+  text-decoration: none;
+  color:#233142;
+}
+
+.language-dropdown .dropdown-content a:hover {
+  background: #f95959;
+}
+
+/* Navbar */
+nav {
+  background:#233142;
+  margin: 0;
+  padding: 0;
+  border: none;
+  size: 5px;
+}
+
+.navbar {
+  display: flex;
+  padding: 0;
+  list-style: none;
+  justify-content: space-around;
+  margin: 0; 
+  padding: 2 px; 
+  border: none;
+  align-items: center;
+}
+
+.navbar li {
+  position: relative;
+}
+
+.navbar a {
+  padding: 8px 10px;
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  vertical-align: middle;
+
+}
+.navbar a, .navbar .dropdown-content {
+  font-size: 18px; 
+  padding: 10px 20px;
+}
+
+.navbar a:hover {
+  background: #f95959;
+  border-radius: 4px;
+}
+
+.navbar .dropdown-content {
+  display: none;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  background:#e3e3e3;
+  color: whitesmoke;
+  min-width: 150px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.navbar .dropdown-content li {
+  padding: 5px 10px;
+  list-style: none;
+}
+
+.navbar .dropdown-content a {
+  padding: 10px;
+  color: #233142;
+  text-decoration: none;
+  display: block;
+}
+
+.navbar .dropdown-content a:hover {
+  background: #f95959;
+}
+
+.navbar .dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Search */
+.search-bar {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 20px; /* Adjust based on spacing preference */
+}
+.search-bar input[type="text"] {
+    padding: 8px;
+    border-radius: 0px;
+    border: 0px solid#233142;
+    font-size: 14px;
+    width: 100px; /* Adjust width as needed */
+}
+
+.search-bar button {
+    padding: 8px 8px;
+    background-color: #f95959;
+    color: #233142;
+    border: none;
+    border-radius: 0px;
+    cursor: pointer;
+}
+
+.search-bar button:hover {
+    background-color: #e3e3e3;
+}
+@media (max-width: 768px) {
+  .nav {
+      flex-direction: column;
+  }
+
+  .search-bar {
+      margin-left: 0;
+      width: 100%;
+      justify-content: flex-end;
+  }
+
+  .search-bar input[type="text"] {
+      width: 80%;
+  }
+}
+        
+.container {
+    background-color: #f9595954;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    margin: auto;
+    text-align: center;
+    margin-top: 10px;
+    color:#233142;
+}
+  
+        
+        .bill-details {
+            margin-bottom: 2rem;
+        }
+        
+        .payment-methods {
+            margin-top: 1rem;
+        }
+        
+        .method {
+            margin-bottom: 1rem;
+        }
+        
+        button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        
+        button:hover {
+            background-color: #0056b3;
+        }
+        /* Footer Styling */
+footer {
+  position: relative; /* Ensure it remains in the flow */
+  z-index: 100000;
+  background-color: #233142;
+  color:#455d7a;
+  padding: 20px;
+  text-align: center;
+  margin-top: auto; /* Ensures footer is at the bottom of the page */
+  clear: both; /* Clears floats above it */
+}
+
+footer a {
+  text-decoration: none;
+  color: #e3e3e3;
+  margin: 0 5px;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+.footer-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+</style>        
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="images/header-logo.jpg" alt="Top Banner">
+            </div>
+            <div class="header-title">
+                <h1>وزارة الكهرباء والطاقة المتجددة</h1>
+            </div>
+            <div class="header-actions right-aligned">
+              <!-- Login Button -->
+<button class="login-button" onclick="openForm()">تسجيل الدخول</button>
+
+<!-- Popup Form -->
+<div class="form-popup" id="myForm">
+  <form action="/action_page.php" class="form-container">
+    <h1>تسجيل الدخول</h1>
+
+    <label for="email"><b>البريد الإلكتروني</b></label>
+    <input type="text" placeholder="أدخل البريد الإلكتروني" name="email" required>
+
+    <label for="psw"><b>كلمة المرور</b></label>
+    <input type="password" placeholder="أدخل كلمة المرور" name="psw" required>
+
+    <button type="submit" class="btn">تسجيل الدخول</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">إغلاق</button>
+  </form>
+</div>
+
+<!-- JavaScript -->
+<script>
+  function openForm() {
+  console.log("Opening form");
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  console.log("Closing form");
+  document.getElementById("myForm").style.display = "none";
+}
+</script>
+              
+<!--language dropdown-->
+                <div class="dropdown language-dropdown">
+                    <button class="dropbtn"><i class="fa fa-globe"></i> اللغة</button>
+                    <div class="dropdown-content">
+                        <a href="#">عربي</a>
+                        <a href="#">إنجليزي</a>
+                        <a href="#">فرنسي</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav>
+            <ul class="navbar">
+                <li><a href="home">الرئيسية</a></li>
+                <li class="dropdown">
+                    <a href="#">الوزارة <i class="fa fa-caret-down"></i></a>
+                    <ul class="dropdown-content">
+                        <li><a href="#">الوزير</a></li>
+                        <li><a href="#">الوزارة</a></li>
+                        <li><a href="#">التاريخ</a></li>
+                        <li><a href="#">الاستراتيجية</a></li>
+                    </ul>
+                </li>
+                <li><a href="#projects">المشاريع</a></li>
+                <li class="dropdown">
+                    <a href="#">الإحصائيات <i class="fa fa-caret-down"></i></a>
+                    <ul class="dropdown-content">
+                        <li><a href="#">شركة الكهرباء القابضة</a></li>
+                        <li><a href="#">البيانات الفنية</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">الخدمات <i class="fa fa-caret-down"></i></a>
+                    <ul class="dropdown-content">
+                        <li><a href="#">الفواتير</a></li>
+                        <li><a href="#">خدمات المستثمرين</a></li>
+                        <li><a href="#">النماذج</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">المناقصات <i class="fa fa-caret-down"></i></a>
+                    <ul class="dropdown-content">
+                        <li><a href="#">المناقصات</a></li>
+                    </ul>
+                </li>
+                <li><a href="#websites">المواقع الإلكترونية</a></li>
+                <li class="dropdown">
+                    <a href="#">الأخبار <i class="fa fa-caret-down"></i></a>
+                    <ul class="dropdown-content">
+                        <li><a href="#">أحدث الأخبار</a></li>
+                        <li><a href="#">المؤتمرات</a></li>
+                        <li><a href="#">مؤتمر EEDC 2015</a></li>
+                    </ul>
+                </li>
+                <div class="search-container">
+                    <form action="/action_page.php">
+                      <input type="text" placeholder="ابحث.." name="search">
+                      <button type="submit"><i class="fa fa-search"></i></button>
+                    </form>
+                  </div>
+            </ul>
+        </nav>
+    </header>
+    <main>
+
+    <div class="container">
+        <h1>فاتورة الكهرباء الخاصة بك</h1>
+        
+        <div class="bill-details">
+            <p><strong>مبلغ الفاتورة:</strong> $<span id="billAmount">0.00</span></p>
+            <p><strong>استهلاك الكهرباء:</strong> <span id="electricityConsumption">0 kWh</span></p>
+        </div>
+
+        <div class="payment-methods">
+            <h2>طرق الدفع</h2>
+            <form id="paymentForm">
+                <div class="method">
+                    <input type="radio" id="creditCard" name="paymentMethod" value="Credit Card">
+                    <label for="creditCard">بطاقة ائتمانية</label>
+                </div>
+                <div class="method">
+                    <input type="radio" id="Fawry" name="paymentMethod" value="Fawry">
+                    <label for="Fawry">فوري</label>
+                </div>
+                <div class="method">
+                    <input type="radio" id="wallet" name="wallet" value=" wallet">
+                    <label for="wallet">المحفظة الإلكترونية</label>
+                </div>
+
+                <button type="submit">دفع الآن</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // script.js
+document.addEventListener('DOMContentLoaded', () => {
+    // Set example data
+    const billAmount = 120.50;
+    const electricityConsumption = 350; // in kWh
+
+    document.getElementById('billAmount').textContent = billAmount.toFixed(2);
+    document.getElementById('electricityConsumption').textContent = `${electricityConsumption} kWh`;
+
+    const paymentForm = document.getElementById('paymentForm');
+    paymentForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const selectedPaymentMethod = document.querySelector('input[name="paymentMethod"]:checked').value;
+        alert(`تم الدفع بنجاح باستخدام ${selectedPaymentMethod}`);
+    });
+});
+    </script>
+</main>
+
+<!-- Footer Section -->
+<footer>
+  <nav class="footer-nav">
+                  <a href="#">المشروعات</a>
+                  <a href="#">الإحصائيات</a>
+                <a href="#">الخدمات</a>
+                  <a href="#">الأخبار</a>
+              </nav>
+              <div class="footer-info">
+                  <a href="#">سياسة الخصوصية</a>
+                  <a href="#">الشروط ولاحكام</a>
+                  <a href="#">اخلاء المسؤولية</a>
+                  <a href="#">خريطة الموقع</a>
+                  <a href="#">اتصل بنا</a>
+                  <a href="#"> رأيك يهمنا </a>
+                  <a href="#">اضف الي المفضلة</a>
+                 
+              </div>
+              <p>يدعم متصفحات اكسبلورر8.0</p>
+              <p>Designed & developed by MOEE - Information Center</p>
+            </footer>
+      </section>
+  </div>
+</body>
+</html>

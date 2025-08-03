@@ -1,0 +1,513 @@
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #e3e3e3; 
+}
+
+/* Header */
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color:#233142;
+  padding: 10px 20px;
+  border-bottom: 1px solid #233142;
+  height: 40px; 
+  padding: 20px 0;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.logo img {
+  height: 50px;
+  padding: 20px;
+}
+
+.header-title h1 {
+  font-size: 25px;
+  flex: 1;
+  color: white;
+  float: left;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+/*login*/
+.login-button {
+  background-color: #f95959;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  text-decoration: none;
+  cursor: pointer;
+  
+}
+
+.login-button:hover {
+  background-color: #D5E7B5;
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  position: fixed;
+  right: 15px;
+  border: 2px solid #e3e3e3;
+  z-index: 15;
+  top:5px;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color:#e3e3e3;
+  top:5px;
+}
+
+/* Full-width input fields */
+.form-container input[type=text],
+.form-container input[type=password] {
+  width: 95%;
+  padding: 10px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+.form-container input[type=text]:focus,
+.form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #455d7a;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 10px;
+  opacity: 0.8;
+}
+
+.form-container .cancel {
+  background-color: red;
+}
+
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+
+/* Language Dropdown */
+
+.language-dropdown {
+  position: relative;
+  margin-right: 20px;
+}
+
+.language-dropdown .dropbtn {
+  font-size: 14px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.language-dropdown .dropbtn i {
+  margin-right: 5px;
+}
+
+.language-dropdown .dropdown-content {
+  display: none;
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background: #e3e3e3;
+  color: whitesmoke;
+  min-width: 150px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000; /* Ensure it appears above other elements */
+  border-radius: 5px;
+}
+
+.language-dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.language-dropdown .dropdown-content a {
+  padding: 10px;
+  color: #233142;
+  text-decoration: none;
+  display: block;
+}
+
+.language-dropdown .dropdown-content a:hover {
+  background: #f95959;
+  color: white;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background: #e3e3e3;
+  color: whitesmoke;
+  min-width: 150px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  border-radius: 5px;
+}
+
+.dropdown-content.show {
+  display: block;
+}
+
+/* Navbar */
+nav {
+  background:#233142;
+  margin: 0;
+  padding: 0;
+  border: none;
+  size: 5px;
+}
+
+.navbar {
+  display: flex;
+  padding: 0;
+  list-style: none;
+  justify-content: space-around;
+  margin: 0; 
+  padding: 2 px; 
+  border: none;
+  align-items: center;
+}
+
+.navbar li {
+  position: relative;
+}
+
+.navbar a {
+  padding: 8px 10px;
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  vertical-align: middle;
+
+}
+.navbar a, .navbar .dropdown-content {
+  font-size: 18px; 
+  padding: 10px 20px;
+}
+
+.navbar a:hover {
+  background: #f95959;
+  border-radius: 4px;
+}
+
+.navbar .dropdown-content {
+  display: none;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  background:#e3e3e3;
+  color: whitesmoke;
+  min-width: 150px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.navbar .dropdown-content li {
+  padding: 5px 10px;
+  list-style: none;
+}
+
+.navbar .dropdown-content a {
+  padding: 10px;
+  color: #233142;
+  text-decoration: none;
+  display: block;
+}
+
+.navbar .dropdown-content a:hover {
+  background: #f95959;
+}
+
+.navbar .dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Search */
+.search-bar {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 20px; /* Adjust based on spacing preference */
+}
+.search-bar input[type="text"] {
+    padding: 8px;
+    border-radius: 0px;
+    border: 0px solid#233142;
+    font-size: 14px;
+    width: 100px; /* Adjust width as needed */
+}
+
+.search-bar button {
+    padding: 8px 8px;
+    background-color: #f95959;
+    color: #233142;
+    border: none;
+    border-radius: 0px;
+    cursor: pointer;
+}
+
+.search-bar button:hover {
+    background-color: #e3e3e3;
+}
+@media (max-width: 768px) {
+  .nav {
+      flex-direction: column;
+  }
+
+  .search-bar {
+      margin-left: 0;
+      width: 100%;
+      justify-content: flex-end;
+  }
+
+  .search-bar input[type="text"] {
+      width: 80%;
+  }
+}
+
+
+
+/* Service Box Styling */
+.first-color {
+  background: #233142;
+  padding: 20px;
+  border-radius: 10px;
+  color: #e3e3e3;
+}
+.service {
+  background: #ffcbcb;
+  padding: 15px;
+  color: #455d7a; 
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  flex: 1;
+  max-width: 30%;
+  margin: 0 10px;
+}
+
+.service:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Icon Styling */
+.service i {
+  color: #455d7a;
+  margin-bottom: 10px;
+  display: block;
+  font-size: 3rem;
+}
+
+/* Typography */
+.service h3 {
+  font-size: 1.2em;
+  margin: 10px 0;
+  color: #233142; 
+}
+
+.service p {
+  font-size: 0.9em;
+  color: #455d7a; 
+}
+
+/* Layout Styling */
+.row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+/* Link Styling */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .row {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .service {
+      max-width: 90%;
+      margin-bottom: 20px;
+  }
+}
+ /* pay your bill popup form */
+.pay-popup {
+  display: none;
+  position:fixed;
+  top: 10%; /* Move to the top */
+  left: 10%; /* Move to the left */
+  border: 1px solid #e3e3e3;
+  z-index: 2000; /* Ensure it's on top */
+  background-color: #233142;
+  width: 300px;
+  padding: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+/* Add styles to the form container */
+.pay-container {
+  max-width: 100%;
+}
+.pay-container h1{
+  color: #e3e3e3;
+}
+ .pay-container label{
+color: #e3e3e3;
+ }
+ 
+.pay-container input[type=text],
+.pay-container input[type=number] {
+  width: 95%;
+  margin-bottom: 25px;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Buttons */
+.btn {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin: 5px 0;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.btn.cancel {
+  background-color: #f95959;
+  color: #fff;
+}
+
+.btn.cancel:hover {
+  background-color: #d9534f;
+}
+
+.pay {
+  background-color: #455d7a;
+  color: #fff;
+}
+
+.pay:hover {
+  background-color: #004099;
+}
+/* Dropdown Container */
+.dropdown.provider {
+  position: relative;
+  width: 100%;
+  margin-bottom: 15px;
+  background-color: #D5E7B5;
+}
+
+.selected-provider {
+  background-color: #f9f9f9;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #333;
+  text-align: left;
+  width: 98%;
+}
+
+.dd-content {
+  display: none;
+  max-height: 150px;
+  overflow-y: auto;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+.dd-content a {
+  display: block;
+  padding: 10px;
+  color: #333;
+  text-decoration: none;
+  font-size: 14px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.dd-content a:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.dropdown.provider.active .dd-content {
+  display: block;
+}
+
+
+/* Footer Styling */
+footer {
+  position: relative; /* Ensure it remains in the flow */
+  z-index: 100000;
+  background-color: #233142;
+  color:#455d7a;
+  padding: 20px;
+  text-align: center;
+  margin-top: auto; /* Ensures footer is at the bottom of the page */
+  clear: both; /* Clears floats above it */
+}
+
+footer a {
+  text-decoration: none;
+  color: #e3e3e3;
+  margin: 0 5px;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+.footer-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 10px;
+}

@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>The Ministry of Electricity and Renewable Energy</title>
+
+    <!-- Link to External Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Link to Font Awesome for Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+</head>
+<body>
+    
+    <!-- Header Section -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="images/header-logo.jpg" alt="Top Banner">
+            </div>
+            <div class="header-title">
+                <h1>Ministry of Electricity and Renewable Energy</h1>
+            </div>
+            <div class="header-actions right-aligned">
+              <!-- Login Button -->
+<button class="login-button" onclick="openForm()">Log In</button>
+
+<!-- Popup Form -->
+<div class="form-popup" id="myForm">
+  <form action="/action_page.php" class="form-container">
+    <h1>Login</h1>
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+    <button type="submit" class="btn">Login</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+
+<!-- JavaScript -->
+<script>
+  function openForm() {
+  console.log("Opening form");
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  console.log("Closing form");
+  document.getElementById("myForm").style.display = "none";
+}
+</script>
+              
+<!--language dropdown-->
+<div class="dropdown language-dropdown">
+  <button class="dropbtn"><i class="fa fa-globe"></i> Language</button>
+  <div class="dropdown-content">
+      <a href="home-AR.html">Arabic</a>
+      <a href="#">English</a>
+  </div>
+</div>
+</div>
+</div>
+        <script>
+          document.addEventListener('DOMContentLoaded', function() {
+            const languageDropdown = document.querySelector('.language-dropdown');
+          
+            languageDropdown.addEventListener('click', function() {
+              const dropdownContent = this.querySelector('.dropdown-content');
+              dropdownContent.classList.toggle('show');
+          
+              // Close other dropdowns if necessary
+              const otherDropdowns = document.querySelectorAll('.language-dropdown .dropdown-content');
+              otherDropdowns.forEach(dropdown => {
+                if (dropdown !== dropdownContent) {
+                  dropdown.classList.remove('show');
+                }
+              });
+            });
+          
+            // Close dropdowns if user clicks outside
+            document.addEventListener('click', function(e) {
+              if (!languageDropdown.contains(e.target)) {
+                const dropdownContent = languageDropdown.querySelector('.dropdown-content');
+                dropdownContent.classList.remove('show');
+              }
+            });
+          });
+</script>          
+<!--navigation bar-->
+        <nav>
+          <ul class="navbar">
+            <li><a href="home">Home</a></li>
+            <li class="dropdown">
+                <a href="#">Ministry <i class="fa fa-caret-down"></i></a>
+                <ul class="dropdown-content">
+                    <li><a href="#">Minister</a></li>
+                    <li><a href="#">Ministry</a></li>
+                    <li><a href="#">History</a></li>
+                    <li><a href="#">Strategy</a></li>
+                </ul>
+            </li>
+            <li><a href="#projects">Projects</a></li>
+            <li class="dropdown">
+                <a href="#">Statistics <i class="fa fa-caret-down"></i></a>
+                <ul class="dropdown-content">
+                    <li><a href="#">Electric Holding Co.</a></li>
+                    <li><a href="#">Technical Data</a></li>
+                </ul>
+            </li>
+            
+               <li class="dropdown">
+                <a href="#">Reports <i class="fa fa-caret-down"></i></a>
+                <ul class="dropdown-content">
+                  <li><a href="#">Egyptian electricity holding company annual reports</a></li>
+                  <li><a href="#">New & Renewable Energy Authority annual reports</a></li>
+                   <li><a href="#">More</a></li>
+                </ul>
+            </li>
+
+             <li class="dropdown">
+                <a href="#">Initiatives <i class="fa fa-caret-down"></i></a>
+                <ul class="dropdown-content">
+                 <li><a href="#">Egyptian Energy Conservation Initiative </a></li>
+                 <li><a href="#">Your Sun Egypt Initiative</a></li>
+                 <li><a href="#">Solar Cell Systems Initiative</a></li>
+               </ul>
+            </li>
+
+            <li class="dropdown">
+                <a href="services-ENG.html">Services <i class="fa fa-caret-down"></i></a>
+                <ul class="dropdown-content">
+                    <li><a href="Calculate-bill/calculator.html">Invoices</a></li>
+                    <li><a href="#">Investor Services</a></li>
+                    <li><a href="#">Forms</a></li>
+                    <li><a href="#">Submit a new service request</a></li>
+
+                </ul>
+            </li>
+            
+            <li class="dropdown">
+                <a href="#">Tenders <i class="fa fa-caret-down"></i></a>
+                <ul class="dropdown-content">
+                    <li><a href="#">Tenders</a></li>
+                </ul>
+            </li>
+            <li><a href="#websites">Websites</a></li>
+            <li class="dropdown">
+                <a href="#">News <i class="fa fa-caret-down"></i></a>
+                <ul class="dropdown-content">
+                    <li><a href="#">Energy News </a></li>
+                    <li><a href="#">Conferences</a></li>
+                    <li><a href="#">EEDC 2015</a></li>
+                </ul>
+            </li>
+            <div class="search-bar">
+              <input type="text" id="searchInput" placeholder="Search..." />
+                  <button type="submit"><i class="fa fa-search"></i></button>
+                </div>
+        </ul>
+    </nav>
+</header>
+
+    <!-- Main Page Layout -->
+    <main>
+     <div class="page-layout">
+  <!-- Images Carousel -->
+<div class="carousel">
+  <div class="carousel-slides">
+    <!-- Slide 1 -->
+    <div class="carousel-slide active" style="background-image: url('images/slide1.jpeg');">
+      <div class="carousel-text">
+        <h2>Powering Your Future with Clean Energy</h2>
+        <p>Welcome to the Egyptian Ministry of Electricity and Renewable Energy</p>
+      </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="carousel-slide" style="background-image: url('images/slide2.jpg');">
+      <div class="carousel-text">
+        <h2>Services Offered</h2>
+        <ul>
+          <li><a href="services/services-ENG.html">Check Your Energy Consumption and Bills</a></li>
+          <li><a href="services/services-ENG.html">Investor Services</a></li>
+        </ul>
+        <button id="moreButton" class="carousel-button">More</button>
+      </div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="carousel-slide" style="background-image: url('images/slide3.jpg');">
+      <div class="carousel-text">
+        <h2>Work With Us</h2>
+        <p>Be part of our mission to deliver clean, sustainable energy solutions. Whether you're looking to work, partner, or volunteer, we have opportunities waiting for you!</p>
+        <button class="carousel-button">Explore Career Opportunities</button>
+      </div>
+    </div>
+
+    <!-- Slide 4 -->
+    <div class="carousel-slide" style="background-image: url('images/contact.jpg');">
+      <div class="carousel-text">
+        <h2>Contact Us</h2>
+        <p>Need Help? We're Here for You</p>
+        <p>24/7 Support for All Energy Needs.</p>
+        <button class="carousel-button">Contact Us</button>
+      </div>
+    </div>
+
+    <!-- Slide 5 -->
+    <div class="carousel-slide" style="background-image: url('images/minister.jpg');">
+      <div class="carousel-text">
+        <h2>Check Our Latest News</h2>
+        <p>Stay up-to-date with the latest energy developments.</p>
+        <button class="carousel-button" onclick="redirectToPage()">View All News</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Carousel Controls -->
+  <button class="carousel-control prev" onclick="prevSlide()">&#10094;</button>
+  <button class="carousel-control next" onclick="nextSlide()">&#10095;</button>
+</div>
+
+<script>
+  document.getElementById('moreButton').addEventListener('click', function() {
+    window.location.href ='./services/services-ENG';
+});
+
+
+  let currentIndex = 0;
+  const slides = document.querySelectorAll('.carousel-slide');
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.toggle('active', i === index);
+    });
+  }
+
+  function nextSlide() {
+    currentIndex = (currentIndex + 1) % slides.length;
+    showSlide(currentIndex);
+  }
+
+  function prevSlide() {
+    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+    showSlide(currentIndex);
+  }
+
+  setInterval(nextSlide, 10000);
+</script>
+
+  
+  <div id="contact-section">
+    <!-- Contact Us Icon -->
+    <div class="contact-us-icon">
+        <i class="fas fa-phone-alt"></i>
+    </div>
+    <div id="contact-form" class="contact-form">
+      <h2>Contact Us</h2>
+      <p class="contact-phone">You can reach us through: <a href="tel:+2023456789">+2022616536</a></p>
+      <form>
+          <input type="text" placeholder="Your Name" required />
+          <input type="email" placeholder="Your Email" required />
+          <input type="tel" placeholder="Phone Number" required />
+          <textarea placeholder="How can we help you?" rows="5" required></textarea>
+          <button type="submit">Submit</button>
+      </form>
+  </div>
+
+  <!-- Feedback Icon -->
+  <div class="feedback-icon">
+      <i class="fas fa-comment-alt"></i>
+  </div>
+  <div id="feedback-form" class="feedback-form">
+      <h2>Feedback</h2>
+      <form>
+          <textarea placeholder="Write your feedback here..." rows="5" required></textarea>
+          <button type="submit">Submit</button>
+      </form>
+  </div>
+</div>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+      const contactIcon = document.querySelector(".contact-us-icon");
+      const feedbackIcon = document.querySelector(".feedback-icon");
+      const contactForm = document.querySelector("#contact-form");
+      const feedbackForm = document.querySelector("#feedback-form");
+
+      contactIcon.addEventListener("click", () => {
+          contactForm.style.display =
+              contactForm.style.display === "block" ? "none" : "block";
+          feedbackForm.style.display = "none"; // Close feedback form if open
+      });
+
+      feedbackIcon.addEventListener("click", () => {
+          feedbackForm.style.display =
+              feedbackForm.style.display === "block" ? "none" : "block";
+          contactForm.style.display = "none"; // Close contact form if open
+      });
+
+      // Close forms when clicking outside
+      document.addEventListener("click", (event) => {
+          if (
+              !contactForm.contains(event.target) &&
+              !contactIcon.contains(event.target)
+          ) {
+              contactForm.style.display = "none";
+          }
+
+          if (
+              !feedbackForm.contains(event.target) &&
+              !feedbackIcon.contains(event.target)
+          ) {
+              feedbackForm.style.display = "none";
+          }
+      });
+  });
+</script>
+
+        <!-- Service Boxes Section -->
+    <div class="container">
+        <div class="title">Services</div>
+        <div class="boxes">
+          <div class="box" onclick="openBillPaymentForm()">
+            <div class="icon">💳</div>
+            <div class="box-title">Pay Your Bills</div>
+            <div class="description">Securely pay and manage your bills online.</div>
+          </div>
+        
+        <!-- Popup Form -->
+<div class="pay-popup" id="billPaymentForm">
+  <form action="/pay_bills" class="pay-container">
+      <h1>Pay Your Bill</h1>
+
+      <label for="meterNumber"><b>Smart Meter Number (13 Digits)</b></label>
+      <input type="text" placeholder="Enter 13-digit Smart Meter Number" name="meterNumber" required>
+
+      <label for="provider"><b>Select Provider</b></label>
+      <div class="dropdown provider">
+          <div class="selected-provider" onclick="toggleDropdown()">Select Provider</div>
+          <div class="dd-content">
+              <a href="#" onclick="selectProvider('Alexandria Electricity Distribution Company')">Alexandria Electricity Distribution Company</a>
+              <a href="#" onclick="selectProvider('Canal Electricity Distribution Company')">Canal Electricity Distribution Company</a>
+              <a href="#" onclick="selectProvider('North Delta Electricity Distribution Company')">North Delta Electricity Distribution Company</a>
+              <a href="#" onclick="selectProvider('South Delta Electricity Distribution Company')">South Delta Electricity Distribution Company</a>
+              <a href="#" onclick="selectProvider('North Cairo Electricity Distribution Company')">North Cairo Electricity Distribution Company</a>
+              <a href="#" onclick="selectProvider('Middle Egypt Electricity Distribution Company')">Middle Egypt Electricity Distribution Company</a>
+              <a href="#" onclick="selectProvider('South Cairo Electricity Distribution Company')">South Cairo Electricity Distribution Company</a>
+              <a href="#" onclick="selectProvider('El-Behera Electricity Distribution Company')">El-Behera Electricity Distribution Company</a>
+          </div>
+      </div>
+      
+      <button type="button" class="btn pay" onclick="validateAndRedirect()">Pay</button>
+      <button type="button" class="btn cancel" onclick="closeBillPaymentForm()">Close</button>
+
+  </form>
+</div>
+
+        <!-- JavaScript -->
+<script>
+
+// Toggle Dropdown
+function toggleDropdown() {
+    const dropdown = document.querySelector('.dropdown.provider');
+    dropdown.classList.toggle('active');
+}
+
+// Select Provider
+function selectProvider(providerName) {
+    document.querySelector('.selected-provider').textContent = providerName;
+    document.querySelector('.dropdown.provider').classList.remove('active');
+}
+
+// Open the Popup Form
+function openBillPaymentForm() {
+    const popup = document.getElementById('billPaymentForm');
+    popup.style.display = 'block'; // Ensure the popup becomes visible
+}
+
+// Close the Popup Form
+function closeBillPaymentForm() {
+    const popup = document.getElementById('billPaymentForm');
+    popup.style.display = 'none'; // Hide the popup
+    document.body.classList.remove('blur'); // Remove blur
+}
+
+// Validate Form and Redirect
+function validateAndRedirect() {
+    const meterNumber = document.querySelector('input[name="meterNumber"]').value;
+    const provider = document.querySelector('.selected-provider').textContent;
+
+    if (!meterNumber || !provider || provider === "Select Provider") {
+        alert("Please fill the required areas: Smart Meter Number and Provider.");
+    } else {
+        // Redirect if validation passes
+        window.location.href = 'pay your bill.html';
+    }
+}
+
+</script>
+       
+          <div class="box" onclick="openBillcalc()">
+            <div class="icon">🖩</div>
+            <div class="box-title">Calculate Your Bills</div>
+            <div class="description">know your bill amount in only one step</div>
+          </div>
+            <div class="box" onclick="reportTheft()">
+                <div class="icon">⚡</div>
+                <div class="box-title">Report Power Theft</div>
+                <div class="description">Confidentially report power theft.</div>
+            </div>
+            <div class="box" onclick="complaints()">
+                <div class="icon">📞</div>
+                <div class="box-title">Complaints</div>
+                <div class="description">Share your concerns with us.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+      
+function openBillcalc() {
+    // Redirect to the calculator.html page in the Calculate-bill folder
+    window.location.href = './Calculate-bill/calculator.html';
+}
+
+
+        function reportTheft() {
+            alert("Redirecting to the Report Power Theft page...");
+        }
+        function complaints() {
+            alert("Redirecting to the Complaints page...");
+        }
+    </script>
+<!--news section-->
+<section class="news-section">
+  <div class="news-container">
+      <div class="news-image">
+          <img src="images/news.jpg" alt="News Image">
+      </div>
+      <div class="news-content">
+          <h2>Latest News</h2>
+          <ul>
+              <li>The Minister of Electricity and Renewable Energy and the Chairman of the Arab Organization for Industrialization witness the signing of a contract for a joint solar panel project with major Swedish companies.</li>
+              <li>First cross-border offshore wind project on the Spanish-Portuguese border announced.</li>
+              <li>Indonesia’s largest floating solar plant goes online.</li>
+              <li>Athens International Airport in Greece adds 16 MW new solar PV capacity for self-consumption.</li>
+              <li>French strike disrupts nuclear reactor.</li>
+          </ul>
+          <a href="http://www.moee.gov.eg/test_new/news_f.aspx" class="learn-more-button">Learn More</a>
+      </div>
+  </div>
+</section>
+
+
+   <!-- Grid Loads Section -->
+<div class="grid-loads">
+    <h2>Grid Loads</h2>
+    <div class="loads">
+        <div class="load-item">
+            <i class="fas fa-bolt"></i>
+            <p>28700 MW</p>
+            <p>Yesterday's Peak Load</p>
+        </div>
+        <div class="load-item">
+            <i class="fas fa-tachometer-alt"></i>
+            <p>22371 MW</p>
+            <p>Yesterday's Min Load</p>
+        </div>
+        <div class="load-item">
+            <i class="fas fa-chart-line"></i>
+            <p>31000 MW</p>
+            <p>this Evening's Expected Peak</p>
+        </div>
+        <div class="load-item">
+            <i class="fas fa-thermometer-half"></i>
+            <p>19°C</p>
+            <p>Temperature</p>
+        </div>
+    </div>
+    </div>
+</div>
+
+
+<div class="sites-and-vote">
+  <!-- Sites worth seeing -->
+  <div class="sites-list">
+    <h2>Sites Worth Seeing</h2>
+    <div class="site-items-container">
+      <div class="site-item">
+        <img src="images/gov.jpg" alt="Gov. Sites">
+        <h3>Gov. Sites</h3>
+       
+      </div>
+      <div class="site-item">
+        <img src="images/Affiliated.jpg" alt="Affiliated Sites">
+        <h3>Affiliated Sites</h3>
+      
+      </div>
+      <div class="site-item">
+        <img src="images/energy.jpg" alt="Energy Sites">
+        <h3>Energy Sites</h3>
+     
+      </div>
+      <div class="site-item">
+        <img src="images/other.jpg" alt="Other Sites">
+        <h3>Other Sites</h3>
+
+      </div>
+    </div>
+  </div>
+  
+     <!-- Vote Section -->
+<!-- Vote Section -->
+<div class="box vote-section">
+  <h2>Vote</h2>
+  <p>What brought you to our website today?</p>
+  <form method="POST" action="">
+    <div class="vote-item">
+      <input type="checkbox" id="news" name="vote[]" value="News pages">
+      <label for="news">News pages</label>
+    </div>
+    <div class="vote-item">
+      <input type="checkbox" id="tenders" name="vote[]" value="Tenders">
+      <label for="tenders">Tenders</label>
+    </div>
+    <div class="vote-item">
+      <input type="checkbox" id="services" name="vote[]" value="Services">
+      <label for="services">Services</label>
+    </div>
+    <div class="vote-item">
+      <input type="checkbox" id="complains" name="vote[]" value="Complains">
+      <label for="complains">Complains</label>
+    </div>
+    <div class="vote-item">
+      <input type="checkbox" id="events" name="vote[]" value="Events">
+      <label for="events">Events</label>
+    </div>
+    <div class="vote-item">
+      <input type="checkbox" id="projects" name="vote[]" value="Projects">
+      <label for="projects">Projects</label>
+    </div>
+    <button type="submit">Submit</button>
+  </form>
+  <div id="voteMessage"></div>
+</div>
+
+    <script>
+  // JavaScript function for handling the vote
+  function submitVote(event) {
+      event.preventDefault(); // Prevent form submission
+
+      // Get all checked checkboxes
+      const checkedVotes = Array.from(document.querySelectorAll('input[name="vote[]"]:checked')).map(
+        checkbox => checkbox.value
+      );
+
+      // Reference the vote message div
+      const voteMessage = document.getElementById("voteMessage");
+
+      if (checkedVotes.length > 0) {
+        // Display the selected options
+        voteMessage.innerHTML = `<p>Thank you for voting for: <strong>${checkedVotes.join(", ")}</strong>!</p>`;
+        voteMessage.style.color = "green";
+      } else {
+        // If no options are selected
+        voteMessage.innerHTML = `<p>Please select at least one option to vote.</p>`;
+        voteMessage.style.color = "red";
+      }
+    }
+
+    </script>
+    
+    
+    
+
+
+
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <nav class="footer-nav">
+            <a href="#">Home</a>
+            <a href="#">Projects</a>
+            <a href="#">Statistics</a>
+            <a href="#">Tenders</a>
+            <a href="#">Services</a>
+            <a href="#">News</a>
+        </nav>
+        <div class="footer-info">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Disclaimer</a>
+            <a href="#">Site Map</a>
+            <a href="#">Contact Us</a>
+            <a href="#">Evaluate Site</a>
+            <a href="#">Add To Favorite</a>
+            <a href="#">Print</a>
+        </div>
+        <p>Support Explorer 8.0+ | Best viewed at 768x1024</p>
+        <p>Designed & Developed by MOEE - Information Center</p>
+    </footer>
+</body>
+</html>

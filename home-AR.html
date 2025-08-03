@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>الخدمات</title>
+    <!-- Link to Font Awesome for Icons -->
+    <link rel="stylesheet" href="styles-AR.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="images/header-logo.jpg" alt="Top Banner">
+            </div>
+            <div class="header-title">
+                <h1>وزارة الكهرباء والطاقة المتجددة</h1>
+        </div>
+        <div class="header-actions right-aligned">
+          <!-- Login Button -->
+<button class="login-button" onclick="openForm()">تسجيل الدخول</button>
+
+<!-- Popup Form --> <div class="form-popup" id="myForm"> <form action="/action_page.php" class="form-container"> <h1>تسجيل الدخول</h1>
+<label for="email"><b>البريد الإلكتروني</b></label>
+<input type="text" placeholder="أدخل البريد الإلكتروني" name="email" required>
+
+<label for="psw"><b>كلمة المرور</b></label>
+<input type="password" placeholder="أدخل كلمة المرور" name="psw" required>
+
+<button type="submit" class="btn">تسجيل الدخول</button>
+<button type="button" class="btn cancel" onclick="closeForm()">إغلاق</button>
+</form>
+</div>
+
+<!-- JavaScript -->
+<script>
+  function openForm() {
+  console.log("Opening form");
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  console.log("Closing form");
+  document.getElementById("myForm").style.display = "none";
+}
+</script>
+              
+<!-- Language Dropdown -->
+<nav style="background:#233142;">
+    <ul class="navbar">
+        <li class="language-dropdown">
+            <a href="#"><i class="fa fa-globe"></i> اللغة</a>
+            <ul class="dropdown-content">
+                <li><a href="home-AR.html">العربية</a></li>
+                <li><a href="home.html">الإنجليزية</a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+
+</div>
+</div>
+<!--navigation bar-->
+<nav>
+<ul class="navbar">
+<li><a href="home">الرئيسية</a></li>
+                <li><a href="#projects">المشروعات</a></li>
+                <li class="dropdown">
+                    <a href="#">الإحصائيات</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#">تقارير الشركة القابضة لكهرباء مصر</a></li>
+                        <li><a href="#">مؤشرات الأداء الفني</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">الأخبار</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#">نشرة أخبار الطاقة</a></li>
+                        <li><a href="#">تصريحات السيد الوزير</a></li>
+                        <li><a href="#">عروض تقديمية </a></li>
+                        <li><a href="#">المركز الإعلامي</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="services.AR.html">الخدمات </a>
+                    <ul class="dropdown-content">
+                        <li><a href="Calculate-bill/calculator-AR.html">الاستعلام عن الفواتير </a></li>
+                        <li><a href="#">شركات التصنيع المحلي</a></li>
+                        <li><a href="#">خدمات المستثمرين</a></li>
+                        <li><a href="#">دليل توصيل التغذية الكهربائية الرئيسية للمنشآت</a></li>
+                        <li><a href="#">إجراءات التوصيل</a></li>
+                        <li><a href="#">لشكاوي </a></li>
+                        <li><a href="#">ابلاغ عن سرقة التيار </a></li>
+                        <li><a href="#">بنك الافكار</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">المناقصات</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#">الإعلانات</a></li>
+                        <li><a href="#">الدعوة</a></li>
+                        <li><a href="#">الممارسات</a></li>
+                    </ul>
+                </li>
+                 <li class="dropdown">
+                    <a href="#">الوزارة</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#">نبذة تاريخية </a></li>
+                        <li><a href="#">استراتيجية الوزارة</a></li>
+                        <li><a href="#">التصنيع المحلي </a></li>
+                        <li><a href="#">الشركات و الهيئات</a></li>
+                        <li><a href="#"> مشاريع مشتركة </a></li>
+                    </ul>
+                </li>
+                <div class="search-bar">
+                    <input type="text" id="searchInput" placeholder="Search..." />
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                      </div>
+              </ul>
+          </nav>
+      </header>
+
+    <!-- Main Page Layout -->
+    <main>
+     <div class="page-layout">
+  <!-- Images Carousel -->
+<div class="carousel">
+  <div class="carousel-slides">
+    <!-- Slide 1 -->
+    <div class="carousel-slide active" style="background-image: url('images/slide1.jpeg');">
+      <div class="carousel-text">
+        <h2>تزويد المستقبل بالطاقة النظيفة</h2>
+        <p>أهلاً بكم في وزارة الكهرباء والطاقة المتجددة في مصر</p>
+      </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="carousel-slide" style="background-image: url('images/slide2.jpg');">
+      <div class="carousel-text">
+        <h2>الخدمات المقدمة</h2>
+        <ul>
+          <li><a href="services/services-ENG.html">تحقق من استهلاكك وفواتيرك للطاقة</a></li>
+          <li><a href="services/services-ENG.html">خدمات المستثمرين</a></li>
+        </ul>
+        <button id="moreButton" class="carousel-button">المزيد</button>
+      </div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="carousel-slide" style="background-image: url('images/slide3.jpg');">
+      <div class="carousel-text">
+        <h2>اعمل معنا</h2>
+        <p>كن جزءًا من مهمتنا لتقديم حلول الطاقة النظيفة والمستدامة. سواء كنت تبحث عن عمل أو شراكة أو تطوع، لدينا فرص تنتظرك!</p>
+        <button class="carousel-button">استكشاف فرص العمل</button>
+      </div>
+    </div>
+
+    <!-- Slide 4 -->
+    <div class="carousel-slide" style="background-image: url('images/contact.jpg');">
+      <div class="carousel-text">
+        <h2>اتصل بنا</h2>
+        <p>هل تحتاج إلى مساعدة؟ نحن هنا من أجلك</p>
+        <p>الدعم على مدار الساعة لجميع احتياجات الطاقة</p>
+        <button class="carousel-button">اتصل بنا</button>
+      </div>
+    </div>
+
+    <!-- Slide 5 -->
+    <div class="carousel-slide" style="background-image: url('images/minister.jpg');">
+      <div class="carousel-text">
+        <h2>تعرّف على أخبارنا الأخيرة</h2>
+        <p>ابقَ على اطلاع بأحدث التطورات في مجال الطاقة</p>
+        <button class="carousel-button" onclick="redirectToPage()">عرض جميع الأخبار</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Carousel Controls -->
+  <button class="carousel-control prev" onclick="prevSlide()">&#10094;</button>
+  <button class="carousel-control next" onclick="nextSlide()">&#10095;</button>
+</div>
+
+<script>
+  document.getElementById('moreButton').addEventListener('click', function() {
+    window.location.href ='./services/services-ENG';
+});
+
+
+  let currentIndex = 0;
+  const slides = document.querySelectorAll('.carousel-slide');
+
+  function showSlide(index) {
+    slides.forEach((slide, i
+
+) => {
+      slide.classList.remove('active');
+      if (i === index) {
+        slide.classList.add('active');
+      }
+    });
+  }
+
+  function prevSlide() {
+    currentIndex = (currentIndex > 0) ? currentIndex - 1 : slides.length - 1;
+    showSlide(currentIndex);
+  }
+
+  function nextSlide() {
+    currentIndex = (currentIndex < slides.length - 1) ? currentIndex + 1 : 0;
+    showSlide(currentIndex);
+  }
+</script>
+<div id="contact-section">
+    <!-- Contact Us Icon -->
+    <div class="contact-us-icon">
+        <i class="fas fa-phone-alt"></i>
+    </div>
+    <div id="contact-form" class="contact-form">
+      <h2>اتصل بنا</h2>
+      <p class="contact-phone">يمكنك التواصل معنا عبر: <a href="tel:+2023456789">+2022616536</a></p>
+      <form>
+          <input type="text" placeholder="اسمك" required />
+          <input type="email" placeholder="بريدك الإلكتروني" required />
+          <input type="tel" placeholder="رقم الهاتف" required />
+          <textarea placeholder="كيف يمكننا مساعدتك؟" rows="5" required></textarea>
+          <button type="submit">إرسال</button>
+      </form>
+  </div>
+
+  <!-- Feedback Icon -->
+  <div class="feedback-icon">
+      <i class="fas fa-comment-alt"></i>
+  </div>
+  <div id="feedback-form" class="feedback-form">
+      <h2>تعليقات</h2>
+      <form>
+          <textarea placeholder="اكتب تعليقاتك هنا..." rows="5" required></textarea>
+          <button type="submit">إرسال</button>
+      </form>
+  </div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+      const contactIcon = document.querySelector(".contact-us-icon");
+      const feedbackIcon = document.querySelector(".feedback-icon");
+      const contactForm = document.querySelector("#contact-form");
+      const feedbackForm = document.querySelector("#feedback-form");
+
+      contactIcon.addEventListener("click", () => {
+          contactForm.style.display =
+              contactForm.style.display === "block" ? "none" : "block";
+          feedbackForm.style.display = "none"; // أغلق نموذج التعليقات إذا كان مفتوحًا
+      });
+
+      feedbackIcon.addEventListener("click", () => {
+          feedbackForm.style.display =
+              feedbackForm.style.display === "block" ? "none" : "block";
+          contactForm.style.display = "none"; // أغلق نموذج الاتصال إذا كان مفتوحًا
+      });
+
+      // أغلق النماذج عند النقر خارجها
+      document.addEventListener("click", (event) => {
+          if (
+              !contactForm.contains(event.target) &&
+              !contactIcon.contains(event.target)
+          ) {
+              contactForm.style.display = "none";
+          }
+
+          if (
+              !feedbackForm.contains(event.target) &&
+              !feedbackIcon.contains(event.target)
+          ) {
+              feedbackForm.style.display = "none";
+          }
+      });
+  });
+</script>
+<!-- قسم مربعات الخدمات -->
+<div class="container">
+    <div class="title">الخدمات</div>
+    <div class="boxes">
+        <div class="box" onclick="openBillPaymentForm()">
+            <div class="icon">💳</div>
+            <div class="box-title">دفع فواتيرك</div>
+            <div class="description">ادفع وادير فواتيرك بشكل آمن عبر الإنترنت.</div>
+        </div>
+        
+        <!-- نموذج منبثق -->
+        <div class="pay-popup" id="billPaymentForm">
+            <form action="/pay_bills" class="pay-container">
+                <h1>دفع فاتورتك</h1>
+
+                <label for="meterNumber"><b>رقم العداد الذكي (13 رقم)</b></label>
+                <input type="text" placeholder="أدخل رقم عداد ذكي مكون من 13 رقم" name="meterNumber" required>
+
+                <label for="provider"><b>اختر مزود الخدمة</b></label>
+                <div class="dropdown provider">
+                    <div class="selected-provider" onclick="toggleDropdown()">اختر المزود</div>
+                    <div class="dd-content">
+                        <a href="#" onclick="selectProvider('شركة توزيع الكهرباء بالإسكندرية')">شركة توزيع الكهرباء بالإسكندرية</a>
+                        <a href="#" onclick="selectProvider('شركة توزيع الكهرباء القناة')">شركة توزيع الكهرباء القناة</a>
+                        <a href="#" onclick="selectProvider('شركة توزيع الكهرباء شمال الدلتا')">شركة توزيع الكهرباء شمال الدلتا</a>
+                        <a href="#" onclick="selectProvider('شركة توزيع الكهرباء جنوب الدلتا')">شركة توزيع الكهرباء جنوب الدلتا</a>
+                        <a href="#" onclick="selectProvider('شركة توزيع الكهرباء شمال القاهرة')">شركة توزيع الكهرباء شمال القاهرة</a>
+                        <a href="#" onclick="selectProvider('شركة توزيع الكهرباء وسط مصر')">شركة توزيع الكهرباء وسط مصر</a>
+                        <a href="#" onclick="selectProvider('شركة توزيع الكهرباء جنوب القاهرة')">شركة توزيع الكهرباء جنوب القاهرة</a>
+                        <a href="#" onclick="selectProvider('شركة توزيع الكهرباء البحيرة')">شركة توزيع الكهرباء البحيرة</a>
+                    </div>
+                </div>
+                
+                <button type="button" class="btn pay" onclick="validateAndRedirect()">دفع</button>
+                <button type="button" class="btn cancel" onclick="closeBillPaymentForm()">إغلاق</button>
+            </form>
+        </div>
+
+        <div class="box" onclick="openBillcalc()">
+            <div class="icon">🖩</div>
+            <div class="box-title">احسب فواتيرك</div>
+            <div class="description">اعرف قيمة فاتورتك في خطوة واحدة.</div>
+        </div>
+        <div class="box" onclick="reportTheft()">
+            <div class="icon">⚡</div>
+            <div class="box-title">بلاغ سرقة الكهرباء</div>
+            <div class="description">قم بالإبلاغ بسرقة الكهرباء بشكل سري.</div>
+        </div>
+        <div class="box" onclick="complaints()">
+            <div class="icon">📞</div>
+            <div class="box-title">الشكاوى</div>
+            <div class="description">شاركنا شكواك.</div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    // Toggle Dropdown
+    function toggleDropdown() {
+        const dropdown = document.querySelector('.dropdown.provider');
+        dropdown.classList.toggle('active');
+    }
+    
+    // Select Provider
+    function selectProvider(providerName) {
+        document.querySelector('.selected-provider').textContent = providerName;
+        document.querySelector('.dropdown.provider').classList.remove('active');
+    }
+    
+    // Open the Popup Form
+    function openBillPaymentForm() {
+        const popup = document.getElementById('billPaymentForm');
+        popup.style.display = 'block'; // Ensure the popup becomes visible
+    }
+    
+    // Close the Popup Form
+    function closeBillPaymentForm() {
+        const popup = document.getElementById('billPaymentForm');
+        popup.style.display = 'none'; // Hide the popup
+        document.body.classList.remove('blur'); // Remove blur
+    }
+    
+    // Validate Form and Redirect
+    function validateAndRedirect() {
+        const meterNumber = document.querySelector('input[name="meterNumber"]').value;
+        const provider = document.querySelector('.selected-provider').textContent;
+    
+        if (!meterNumber || !provider || provider === "Select Provider") {
+            alert("Please fill the required areas: Smart Meter Number and Provider.");
+        } else {
+            // Redirect if validation passes
+            window.location.href = 'pay-AR.html';
+        }
+    }
+    
+    </script>
+ <!-- JavaScript -->
+ <script>
+      
+    function openBillcalc() {
+        // Redirect to the calculator.html page in the Calculate-bill folder
+        window.location.href = './Calculate-bill/calculator-AR.html';
+    }
+    
+    
+            function reportTheft() {
+                alert("Redirecting to the Report Power Theft page...");
+            }
+            function complaints() {
+                alert("Redirecting to the Complaints page...");
+            }
+        </script>
+<!-- قسم الأخبار -->
+<section class="news-section">
+    <div class="news-container">
+        <div class="news-image">
+            <img src="images/news.jpg" alt="صورة الأخبار">
+        </div>
+        <div class="news-content">
+            <h2>آخر الأخبار</h2>
+            <ul>
+                <li>شهد وزير الكهرباء والطاقة المتجددة ورئيس المنظمة العربية للتصنيع توقيع عقد مشروع مشترك للألواح الشمسية مع شركات سويدية كبرى.</li>
+                <li>تم الإعلان عن أول مشروع للطاقة الريحية عبر الحدود على الحدود الإسبانية البرتغالية.</li>
+                <li>بدأ تشغيل أكبر محطة طاقة شمسية عائمة في إندونيسيا.</li>
+                <li>مطار أثينا الدولي في اليونان يضيف 16 ميجاوات من الطاقة الشمسية ذاتية الاستهلاك.</li>
+                <li>اضراب فرنسي يعطل المفاعل النووي.</li>
+            </ul>
+            <a href="http://www.moee.gov.eg/test_new/news_f.aspx" class="learn-more-button">تعرف على المزيد</a>
+        </div>
+    </div>
+</section>
+
+<!-- قسم الأحمال الكهربائية -->
+<section class="grid-loads">
+    <h2>الأحمال الكهربائية</h2>
+    <div class="loads">
+        <div class="load-item">
+            <i class="fas fa-bolt"></i>
+            <p>28700 ميجاوات</p>
+            <p>أقصى حمل بالأمس</p>
+        </div>
+        <div class="load-item">
+            <i class="fas fa-tachometer-alt"></i>
+            <p>22371 ميجاوات</p>
+            <p>أدنى حمل بالأمس</p>
+        </div>
+        <div class="load-item">
+            <i class="fas fa-chart-line"></i>
+            <p>31000 ميجاوات</p>
+            <p>أقصى حمل مساء اليوم المتوقع</p>
+        </div>
+        <div class="load-item">
+            <i class="fas fa-thermometer-half"></i>
+            <p>19°C</p>
+            <p>درجة الحرارة</p>
+        </div>
+    </div>
+</section>
+
+<!-- مواقع تستحق المشاهدة -->
+<section class="sites-and-vote">
+    <div class="sites-list">
+        <h2>مواقع تستحق المشاهدة</h2>
+        <div class="site-items-container">
+            <div class="site-item">
+                <img src="images/gov.jpg" alt="مواقع حكومية">
+                <h3>مواقع حكومية</h3>
+            </div>
+            <div class="site-item">
+                <img src="images/Affiliated.jpg" alt="مواقع تابعة">
+                <h3>مواقع تابعة</h3>
+            </div>
+            <div class="site-item">
+                <img src="images/energy.jpg" alt="مواقع الطاقة">
+                <h3>مواقع الطاقة</h3>
+            </div>
+            <div class="site-item">
+                <img src="images/other.jpg" alt="مواقع أخرى">
+                <h3>مواقع أخرى</h3>
+            </div>
+        </div>
+    </div>
+
+    <!-- قسم التصويت -->
+    <div class="box vote-section">
+        <h2>التصويت</h2>
+        <p>ما الذي جلبك إلى موقعنا اليوم؟</p>
+        <form method="POST" action="" onsubmit="submitVote(event)">
+            <div class="vote-item">
+                <input type="checkbox" id="news" name="vote[]" value="صفحات الأخبار">
+                <label for="news">صفحات الأخبار</label>
+            </div>
+            <div class="vote-item">
+                <input type="checkbox" id="tenders" name="vote[]" value="العطاءات">
+                <label for="tenders">العطاءات</label>
+            </div>
+            <div class="vote-item">
+                <input type="checkbox" id="services" name="vote[]" value="الخدمات">
+                <label for="services">الخدمات</label>
+            </div>
+            <div class="vote-item">
+                <input type="checkbox" id="complains" name="vote[]" value="الشكاوى">
+                <label for="complains">الشكاوى</label>
+            </div>
+            <div class="vote-item">
+                <input type="checkbox" id="events" name="vote[]" value="الأحداث">
+                <label for="events">الأحداث</label>
+            </div>
+            <div class="vote-item">
+                <input type="checkbox" id="projects" name="vote[]" value="المشروعات">
+                <label for="projects">المشروعات</label>
+            </div>
+            <button type="submit">إرسال</button>
+        </form>
+        <div id="voteMessage"></div>
+    </div>
+
+    <script>
+        // JavaScript function for handling the vote
+        function submitVote(event) {
+            event.preventDefault(); // Prevent form submission
+
+            // Get all checked checkboxes
+            const checkedVotes = Array.from(document.querySelectorAll('input[name="vote[]"]:checked')).map(
+                checkbox => checkbox.value
+            );
+
+            // Reference the vote message div
+            const voteMessage = document.getElementById("voteMessage");
+
+            if (checkedVotes.length > 0) {
+                // Display the selected options
+                voteMessage.innerHTML = `<p>شكرًا لك على التصويت لـ: <strong>${checkedVotes.join(", ")}</strong>!</p>`;
+                voteMessage.style.color = "green";
+            } else {
+                // If no options are selected
+                voteMessage.innerHTML = `<p>الرجاء اختيار على الأقل خيارًا واحدًا للتصويت.</p>`;
+                voteMessage.style.color = "red";
+            }
+        }
+    </script>
+</section>
+<!-- قسم التذييل (القدم) -->
+<footer>
+    <nav class="footer-nav">
+        <a href="#">الرئيسية</a>
+        <a href="#">المشروعات</a>
+        <a href="#">الإحصاءات</a>
+        <a href="#">العطاءات</a>
+        <a href="#">الخدمات</a>
+        <a href="#">الأخبار</a>
+    </nav>
+    <div class="footer-info">
+        <a href="#">سياسة الخصوصية</a>
+        <a href="#">الشروط والأحكام</a>
+        <a href="#">إخلاء المسؤولية</a>
+        <a href="#">خريطة الموقع</a>
+        <a href="#">اتصل بنا</a>
+        <a href="#">قيم الموقع</a>
+        <a href="#">أضف إلى المفضلة</a>
+        <a href="#">طباعة</a>
+    </div>
+    <p>الدعم لمتصفح 8.0+ | أفضل عرض بدقة 768x1024</p>
+    <p>صمم & طور بواسطة وزارة الكهرباء والطاقة المتجددة - مركز المعلومات</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Services Page</title>
+
+    <!-- Link to External Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Link to Font Awesome for Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="images/header-logo.jpg" alt="Top Banner">
+            </div>
+            <div class="header-title">
+                <h1>Ministry of Electricity and Renewable Energy</h1>
+            </div>
+            <div class="header-actions right-aligned">
+              <!-- Login Button -->
+<button class="login-button" onclick="openForm()">Log In</button>
+
+<!-- Popup Form -->
+<div class="form-popup" id="myForm">
+  <form action="/action_page.php" class="form-container">
+    <h1>Login</h1>
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+    <button type="submit" class="btn">Login</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+
+<!-- JavaScript -->
+<script>
+  function openForm() {
+  console.log("Opening form");
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  console.log("Closing form");
+  document.getElementById("myForm").style.display = "none";
+}
+</script>
+              
+<!--language dropdown-->
+                <div class="dropdown language-dropdown">
+                    <button class="dropbtn"><i class="fa fa-globe"></i> Language</button>
+                    <div class="dropdown-content">
+                        <a href="services.AR.html">Arabic</a>
+                        <a href="#">English</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const languageDropdown = document.querySelector('.language-dropdown');
+
+  languageDropdown.addEventListener('click', function() {
+    const dropdownContent = this.querySelector('.dropdown-content');
+    dropdownContent.classList.toggle('show');
+
+    // Close other dropdowns if necessary
+    const otherDropdowns = document.querySelectorAll('.language-dropdown .dropdown-content');
+    otherDropdowns.forEach(dropdown => {
+      if (dropdown !== dropdownContent) {
+        dropdown.classList.remove('show');
+      }
+    });
+  });
+
+  // Close dropdowns if user clicks outside
+  document.addEventListener('click', function(e) {
+    if (!languageDropdown.contains(e.target)) {
+      const dropdownContent = languageDropdown.querySelector('.dropdown-content');
+      dropdownContent.classList.remove('show');
+    }
+  });
+});
+
+        </script>
+<!--navigation bar-->
+<nav>
+    <ul class="navbar">
+      <li><a href="home">Home</a></li>
+      <li class="dropdown">
+          <a href="#">Ministry <i class="fa fa-caret-down"></i></a>
+          <ul class="dropdown-content">
+              <li><a href="#">Minister</a></li>
+              <li><a href="#">Ministry</a></li>
+              <li><a href="#">History</a></li>
+              <li><a href="#">Strategy</a></li>
+          </ul>
+      </li>
+      <li><a href="#projects">Projects</a></li>
+      <li class="dropdown">
+          <a href="#">Statistics <i class="fa fa-caret-down"></i></a>
+          <ul class="dropdown-content">
+              <li><a href="#">Electric Holding Co.</a></li>
+              <li><a href="#">Technical Data</a></li>
+          </ul>
+      </li>
+      
+         <li class="dropdown">
+          <a href="#">Reports <i class="fa fa-caret-down"></i></a>
+          <ul class="dropdown-content">
+            <li><a href="#">Egyptian electricity holding company annual reports</a></li>
+            <li><a href="#">New & Renewable Energy Authority annual reports</a></li>
+             <li><a href="#">More</a></li>
+          </ul>
+      </li>
+
+       <li class="dropdown">
+          <a href="#">Initiatives <i class="fa fa-caret-down"></i></a>
+          <ul class="dropdown-content">
+           <li><a href="#">Egyptian Energy Conservation Initiative </a></li>
+           <li><a href="#">Your Sun Egypt Initiative</a></li>
+           <li><a href="#">Solar Cell Systems Initiative</a></li>
+         </ul>
+      </li>
+
+      <li class="dropdown">
+          <a href="#">Services <i class="fa fa-caret-down"></i></a>
+          <ul class="dropdown-content">
+              <li><a href="#">Invoices</a></li>
+              <li><a href="#">Investor Services</a></li>
+              <li><a href="#">Forms</a></li>
+              <li><a href="#">Submit a new service request</a></li>
+
+          </ul>
+      </li>
+      
+      <li class="dropdown">
+          <a href="#">Tenders <i class="fa fa-caret-down"></i></a>
+          <ul class="dropdown-content">
+              <li><a href="#">Tenders</a></li>
+          </ul>
+      </li>
+      <li><a href="#websites">Websites</a></li>
+      <li class="dropdown">
+          <a href="#">News <i class="fa fa-caret-down"></i></a>
+          <ul class="dropdown-content">
+              <li><a href="#">Energy News </a></li>
+              <li><a href="#">Conferences</a></li>
+              <li><a href="#">EEDC 2015</a></li>
+          </ul>
+      </li>
+      <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Search..." />
+            <button type="submit"><i class="fa fa-search"></i></button>
+          </div>
+  </ul>
+</nav>
+</header>
+<main>
+    <!--SERVICES-->
+<!-- Row 1 -->
+<div class="row">
+    <a href="#s1" class="service second-color" onclick="openBillPaymentForm()">
+        <i class="fas fa-money-bill-wave fa-3x third-color"></i>
+        <h3>Pay Electricity Bills</h3>
+        <p>Pay Your Electricity Bills Securely Online.</p>
+    </a>
+    <a href="#s1" class="service second-color">
+        <i class="fas fa-lightbulb fa-3x third-color"></i>
+        <h3>Report Electricity Theft</h3>
+        <p>Report Electricity Theft to maintain security.</p>
+    </a>
+    <a href="#s3" class="service second-color">
+        <i class="fas fa-plug fa-3x third-color"></i>
+        <h3>Electricity Requests</h3>
+        <p>Apply for Electricity Connections For New Locations.</p>
+    </a>
+</div>
+
+<!-- Row 2 -->
+<div class="row">
+    <a href="#s4" class="service second-color">
+        <i class="fas fa-exchange-alt fa-3x third-color"></i>
+        <h3>Meter Ownership Transfer</h3>
+        <p>Learn How To Transfer Meter Ownership.</p>
+    </a>
+    <a href="Calculate-bill/calculator.html" class="service second-color">
+        <i class="fas fa-file-invoice-dollar fa-3x third-color"></i>
+        <h3>Bill Inquiry</h3>
+        <p>Check and View Your Electricity Bills Easily.</p>
+    </a>
+    <a href="#s6" class="service second-color">
+        <i class="fas fa-tools fa-3x third-color"></i>
+        <h3>Replace Electricity Meters</h3>
+        <p>Apply For Replacement Of Electricity Meters.</p>
+    </a>
+</div>
+</div>
+
+    <!-- Popup Form -->
+<div class="pay-popup" id="billPaymentForm">
+  <form action="/pay_bills" class="pay-container">
+      <h1>Pay Your Bill</h1>
+
+      <label for="meterNumber"><b>Smart Meter Number (13 Digits)</b></label>
+      <input type="text" placeholder="Enter 13-digit Smart Meter Number" name="meterNumber" required>
+
+      <label for="provider"><b>Select Provider</b></label>
+      <div class="dropdown provider">
+          <div class="selected-provider" onclick="toggleDropdown()">Select Provider</div>
+          <div class="dd-content">
+              <a href="#" onclick="selectProvider('Alexandria Electricity Distribution Company')">Alexandria Electricity Distribution Company</a>
+              <a href="#" onclick="selectProvider('Canal Electricity Distribution Company')">Canal Electricity Distribution Company</a>
+              <a href="#" onclick="selectProvider('North Delta Electricity Distribution Company')">North Delta Electricity Distribution Company</a>
+              <a href="#" onclick="selectProvider('South Delta Electricity Distribution Company')">South Delta Electricity Distribution Company</a>
+              <a href="#" onclick="selectProvider('North Cairo Electricity Distribution Company')">North Cairo Electricity Distribution Company</a>
+              <a href="#" onclick="selectProvider('Middle Egypt Electricity Distribution Company')">Middle Egypt Electricity Distribution Company</a>
+              <a href="#" onclick="selectProvider('South Cairo Electricity Distribution Company')">South Cairo Electricity Distribution Company</a>
+              <a href="#" onclick="selectProvider('El-Behera Electricity Distribution Company')">El-Behera Electricity Distribution Company</a>
+          </div>
+      </div>
+      
+      <button type="button" class="btn pay" onclick="validateAndRedirect()">Pay</button>
+      <button type="button" class="btn cancel" onclick="closeBillPaymentForm()">Close</button>
+
+  </form>
+</div>
+
+<!-- JavaScript -->        
+<script>
+
+// Toggle Dropdown
+function toggleDropdown() {
+    const dropdown = document.querySelector('.dropdown.provider');
+    dropdown.classList.toggle('active');
+}
+
+// Select Provider
+function selectProvider(providerName) {
+    document.querySelector('.selected-provider').textContent = providerName;
+    document.querySelector('.dropdown.provider').classList.remove('active');
+}
+
+// Open the Popup Form
+function openBillPaymentForm() {
+    const popup = document.getElementById('billPaymentForm');
+    popup.style.display = 'block'; // Ensure the popup becomes visible
+}
+
+// Close the Popup Form
+function closeBillPaymentForm() {
+    const popup = document.getElementById('billPaymentForm');
+    popup.style.display = 'none'; // Hide the popup
+}
+
+// Validate Form and Redirect
+function validateAndRedirect() {
+    const meterNumber = document.querySelector('input[name="meterNumber"]').value.trim(); // Added trim to remove spaces
+    const provider = document.querySelector('.selected-provider').textContent.trim();
+
+    if (!meterNumber || !provider || provider === "Select Provider") {
+        alert("Please fill in the required fields: Smart Meter Number and Provider.");
+    } else {
+        // Redirect if validation passes
+        window.location.href = 'pay your bill.html'; // Redirect to correct URL
+    }
+}
+
+</script>
+
+</main>
+
+        <!-- Footer Section -->
+    <footer>
+        <nav class="footer-nav">
+            <a href="#">Home</a>
+            <a href="#">Projects</a>
+            <a href="#">Statistics</a>
+            <a href="#">Tenders</a>
+            <a href="#">Services</a>
+            <a href="#">News</a>
+        </nav>
+        <div class="footer-info">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Disclaimer</a>
+            <a href="#">Site Map</a>
+            <a href="#">Contact Us</a>
+            <a href="#">Evaluate Site</a>
+            <a href="#">Add To Favorite</a>
+            <a href="#">Print</a>
+        </div>
+        <p>Support Explorer 8.0+ | Best viewed at 768x1024</p>
+        <p>Designed & Developed by MOEE - Information Center</p>
+    </footer>
+</body>
+</html>

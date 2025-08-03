@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>الخدمات</title>
+    <!-- Link to Font Awesome for Icons -->
+    <link rel="stylesheet" href="style-AR.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="images/header-logo.jpg" alt="Top Banner">
+            </div>
+            <div class="header-title">
+                <h1>جمهورية مصر العربية وزارة الكهرباء و الطاقة المتجددة</h1>
+            </div>
+            <div class="header-actions right-aligned">
+              <!-- Login Button -->
+<button class="login-button" onclick="openForm()">Log In</button>
+
+<!-- Popup Form -->
+<div class="form-popup" id="myForm">
+  <form action="/action_page.php" class="form-container">
+    <h1>Login</h1>
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+    <button type="submit" class="btn">Login</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+
+<!-- JavaScript -->
+<script>
+  function openForm() {
+  console.log("Opening form");
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  console.log("Closing form");
+  document.getElementById("myForm").style.display = "none";
+}
+</script>
+              
+<!-- Language Dropdown -->
+<nav style="background:#233142;">
+    <ul class="navbar">
+        <li class="language-dropdown">
+            <a href="#"><i class="fa fa-globe"></i> اللغة</a>
+            <ul class="dropdown-content">
+                <li><a href="#">العربية</a></li>
+                <li><a href="services-ENG.html">الإنجليزية</a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+
+</div>
+</div>
+<!--navigation bar-->
+<nav>
+<ul class="navbar">
+<li><a href="home-AR.html">الرئيسية</a></li>
+                <li><a href="#projects">المشروعات</a></li>
+                <li class="dropdown">
+                    <a href="#">الإحصائيات</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#">تقارير الشركة القابضة لكهرباء مصر</a></li>
+                        <li><a href="#">مؤشرات الأداء الفني</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">الأخبار</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#">نشرة أخبار الطاقة</a></li>
+                        <li><a href="#">تصريحات السيد الوزير</a></li>
+                        <li><a href="#">عروض تقديمية </a></li>
+                        <li><a href="#">المركز الإعلامي</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="services.AR.html">الخدمات </a>
+                    <ul class="dropdown-content">
+                        <li><a href="Calculate-bill/calculator-AR.html">الاستعلام عن الفواتير </a></li>
+                        <li><a href="#">شركات التصنيع المحلي</a></li>
+                        <li><a href="#">خدمات المستثمرين</a></li>
+                        <li><a href="#">دليل توصيل التغذية الكهربائية الرئيسية للمنشآت</a></li>
+                        <li><a href="#">إجراءات التوصيل</a></li>
+                        <li><a href="#">لشكاوي </a></li>
+                        <li><a href="#">ابلاغ عن سرقة التيار </a></li>
+                        <li><a href="#">احسب استهلاكك</a></li>
+                        <li><a href="#">بنك الافكار</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">المناقصات</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#">الإعلانات</a></li>
+                        <li><a href="#">الدعوة</a></li>
+                        <li><a href="#">الممارسات</a></li>
+                    </ul>
+                </li>
+                 <li class="dropdown">
+                    <a href="#">الوزارة</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#">نبذة تاريخية </a></li>
+                        <li><a href="#">استراتيجية الوزارة</a></li>
+                        <li><a href="#">التصنيع المحلي </a></li>
+                        <li><a href="#">الشركات و الهيئات</a></li>
+                        <li><a href="#"> مشاريع مشتركة </a></li>
+                    </ul>
+                </li>
+                <div class="search-bar">
+                    <input type="text" id="searchInput" placeholder="Search..." />
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                      </div>
+              </ul>
+          </nav>
+      </header>
+
+
+      <div class="services first-color" dir="rtl" lang="ar">
+        <!-- الصف الأول -->
+        <div class="row">
+            <a href="#s1" class="service second-color" onclick="openBillPaymentForm()">
+                <i class="fas fa-money-bill-wave fa-3x third-color"></i>
+                <h3>دفع فواتير الكهرباء</h3>
+                <p>قم بدفع فواتير الكهرباء الخاصة بك بأمان عبر الإنترنت.</p>
+            </a>
+            <a href="#s2" class="service second-color">
+                <i class="fas fa-lightbulb fa-3x third-color"></i>
+                <h3>الإبلاغ عن سرقة الكهرباء</h3>
+                <p>أبلغ عن سرقة الكهرباء للحفاظ على الأمن.</p>
+            </a>
+            <a href="#s3" class="service second-color">
+                <i class="fas fa-plug fa-3x third-color"></i>
+                <h3>طلبات الكهرباء</h3>
+                <p>قدم طلباً لتوصيل الكهرباء للمواقع الجديدة.</p>
+            </a>
+        </div>
+    
+        <!-- الصف الثاني -->
+        <div class="row">
+            <a href="#s4" class="service second-color">
+                <i class="fas fa-exchange-alt fa-3x third-color"></i>
+                <h3>نقل ملكية العداد</h3>
+                <p>تعرف على كيفية نقل ملكية عداد الكهرباء.</p>
+            </a>
+            <a href="Calculate-bill/calculator-AR.html" class="service second-color">
+                <i class="fas fa-file-invoice-dollar fa-3x third-color"></i>
+                <h3>الاستعلام عن الفواتير</h3>
+                <p>تحقق من فواتير الكهرباء الخاصة بك بسهولة.</p>
+            </a>
+            <a href="#S6" class="service second-color">
+                <i class="fas fa-tools fa-3x third-color"></i>
+                <h3>استبدال عدادات الكهرباء</h3>
+                <p>قدم طلباً لاستبدال عدادات الكهرباء.</p>
+            </a>
+        </div>
+    </div>
+    <!-- نموذج الدفع المنبثق -->
+<div class="pay-popup" id="billPaymentForm">
+    <form action="/pay_bills" class="pay-container">
+        <h1>ادفع فاتورتك</h1>
+  
+        <label for="meterNumber"><b>رقم العداد الذكي (13 رقماً)</b></label>
+        <input type="text" placeholder="أدخل رقم العداد الذكي المكون من 13 رقماً" name="meterNumber" required>
+  
+        <label for="provider"><b>اختر المزود</b></label>
+        <div class="dropdown provider">
+            <div class="selected-provider" onclick="toggleDropdown()">اختر المزود</div>
+            <div class="dd-content">
+                <a href="#" onclick="selectProvider('شركة توزيع كهرباء الإسكندرية')">شركة توزيع كهرباء الإسكندرية</a>
+                <a href="#" onclick="selectProvider('شركة توزيع كهرباء القناة')">شركة توزيع كهرباء القناة</a>
+                <a href="#" onclick="selectProvider('شركة توزيع كهرباء شمال الدلتا')">شركة توزيع كهرباء شمال الدلتا</a>
+                <a href="#" onclick="selectProvider('شركة توزيع كهرباء جنوب الدلتا')">شركة توزيع كهرباء جنوب الدلتا</a>
+                <a href="#" onclick="selectProvider('شركة توزيع كهرباء شمال القاهرة')">شركة توزيع كهرباء شمال القاهرة</a>
+                <a href="#" onclick="selectProvider('شركة توزيع كهرباء وسط الدلتا')">شركة توزيع كهرباء وسط الدلتا</a>
+                <a href="#" onclick="selectProvider('شركة توزيع كهرباء جنوب القاهرة')">شركة توزيع كهرباء جنوب القاهرة</a>
+                <a href="#" onclick="selectProvider('شركة توزيع كهرباء البحيرة')">شركة توزيع كهرباء البحيرة</a>
+            </div>
+        </div>
+        
+        <button type="button" class="btn pay" onclick="validateAndRedirect()">دفع</button>
+        <button type="button" class="btn cancel" onclick="closeBillPaymentForm()">إغلاق</button>
+    </form>
+  </div>
+  
+  <!-- JavaScript -->        
+  <script>
+  
+  // توجيه القائمة المنسدلة
+  function toggleDropdown() {
+      const dropdown = document.querySelector('.dropdown.provider');
+      dropdown.classList.toggle('active');
+  }
+  
+  // تحديد المزود
+  function selectProvider(providerName) {
+      document.querySelector('.selected-provider').textContent = providerName;
+      document.querySelector('.dropdown.provider').classList.remove('active');
+  }
+  
+  // فتح نموذج الدفع المنبثق
+  function openBillPaymentForm() {
+      const popup = document.getElementById('billPaymentForm');
+      popup.style.display = 'block'; // جعل النموذج المنبثق مرئيًا
+  }
+  
+  // إغلاق نموذج الدفع المنبثق
+  function closeBillPaymentForm() {
+      const popup = document.getElementById('billPaymentForm');
+      popup.style.display = 'none'; // إخفاء النموذج
+  }
+  
+  // التحقق من صحة النموذج وإعادة التوجيه
+  function validateAndRedirect() {
+      const meterNumber = document.querySelector('input[name="meterNumber"]').value.trim(); // إضافة trim لإزالة المسافات
+      const provider = document.querySelector('.selected-provider').textContent.trim();
+  
+      if (!meterNumber || !provider || provider === "اختر المزود") {
+          alert("يرجى ملء الحقول المطلوبة: رقم العداد الذكي والمزود.");
+      } else {
+          // إعادة التوجيه إذا نجح التحقق
+          window.location.href = 'pay-AR.html'; // إعادة التوجيه إلى URL الصحيح
+      }
+  }
+  </script>   
+
+<!-- Footer Section -->
+<footer>
+    <nav class="footer-nav">
+                    <a href="#">المشروعات</a>
+                    <a href="#">الإحصائيات</a>
+                  <a href="#">الخدمات</a>
+                    <a href="#">الأخبار</a>
+                </nav>
+                <div class="footer-info">
+                    <a href="#">سياسة الخصوصية</a>
+                    <a href="#">الشروط ولاحكام</a>
+                    <a href="#">اخلاء المسؤولية</a>
+                    <a href="#">خريطة الموقع</a>
+                    <a href="#">اتصل بنا</a>
+                    <a href="#"> رأيك يهمنا </a>
+                    <a href="#">اضف الي المفضلة</a>
+                   
+                </div>
+                <p>يدعم متصفحات اكسبلورر8.0</p>
+                <p>Designed & developed by MOEE - Information Center</p>
+              </footer>
+        </section>
+    </div>
+</body>
+</html>
